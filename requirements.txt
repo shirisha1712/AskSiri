@@ -3,3 +3,5 @@ Flask
 python-dotenv
 
 gunicorn
+
+google-generativeai
