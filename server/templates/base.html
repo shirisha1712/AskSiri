@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI Siri Log Analyzer{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/img/siri-logo.png">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo-nav full-width">
+            <div class="nav-left">
+                <img src="{{ url_for('static', filename='img/siri.webp') }}" alt="AI Siri Logo" class="logo">
+                <nav class="nav-main">
+                    <a href="/">Home</a>
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                    <a href="/analyzer">AI Log Analyzer</a>
+                    <a href="/about">About</a>
+                </nav>
+            </div>
+            <nav class="nav-contact">
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="center-bg">
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    <footer class="footer-bottom-right">
+        <p>&copy; 2025 AI Siri Log Analyzer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

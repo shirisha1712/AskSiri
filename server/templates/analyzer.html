@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}AI Log Analyzer | AI Siri Log Analyzer{% endblock %}
+{% block content %}
+<div class="analyzer-chat-container">
+    <h2>AI Log Analyzer</h2>
+    <!-- Chat messages will appear here if needed -->
+    <form id="upload-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" id="log-files" name="log_files" multiple accept=".log,.txt,.pdf">
+        </div>
+        <div class="form-group">
+            <textarea id="log-text" name="log_text" rows="7" style="width:100%; font-size:1.1rem;" placeholder="Paste your log data here..."></textarea>
+        </div>
+        <div class="form-group">
+            <input type="text" id="prompt-input" name="prompt" placeholder="Ask a question about your logs..." required style="width:100%; font-size:1.1rem;">
+        </div>
+        <div class="form-group button-center">
+            <button type="submit" class="btn-primary" style="font-size:1.1rem;">Send</button>
+        </div>
+    </form>
+    <div id="loading" class="loading" style="display: none;">
+        <p>Analyzing... Please wait.</p>
+    </div>
+    <div id="results" class="results-container" style="display: none;">
+        <h2>Analysis Results</h2>
+        <pre id="analysis-output"></pre>
+    </div>
+    <!-- Results box removed as requested -->
+</div>
+<script src="/static/js/main.js"></script>
+{% endblock %}
